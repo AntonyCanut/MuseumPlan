@@ -17,6 +17,7 @@ namespace MuseumsPlan
 			//DisplayAlert ("Alert", "You have been alerted", "OK");
 			//App.Instance.MainPage = new NavigationPage (new MuseumList ());
 			Navigation.PushModalAsync(new MuseumList());
+		    Navigation.PushModalAsync(new MuseumInformation());
 		}
 	}
 }

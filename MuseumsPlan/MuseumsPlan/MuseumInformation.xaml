@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MuseumsPlan.MuseumInformation">
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <Image Source="./Ressources/Drawable/I.png"/> 
+  <Label Text="Informations Musée : " />
+    <Label Text="{Binding nom_du_musee}"
+         verticalOptions="Fill" />
+    <Label Text="{Binding ville}"
+         verticalOptions="Fill" />
+    <Label Text="{Binding adresse}"
+           VerticalOptions="Fill" />
+    <Label Text="{Binding dept}"
+           VerticalOptions="Fill" />
+    <Label Text="{Binding cp}"
+           VerticalOptions="Fill" />
+    <Label Text="{Binding sitweb}"
+           VerticalOptions="Fill" />
+    <Label Text="{Binding periode_ouverture}"
+           VerticalOptions="Fill" />
+    <Label Text="{Binding jours_nocturnes}"
+           VerticalOptions="Fill" />
+  </ContentPage>
