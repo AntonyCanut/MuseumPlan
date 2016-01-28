@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 	BackgroundColor="White"
+ 				xmlns="http://xamarin.com/schemas/2014/forms" 
+ 				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MuseumsPlan.Home">
+	<ContentPage.Content>
+		<StackLayout>
+			<StackLayout Padding="20,0,20,20">
+				<Image Source="./Ressources/Drawable/Logo.png"/>
+				<Button Text="Liste des Musées"
+						BackgroundColor="#FF663434"
+						Clicked="OnEnterClicked"/>
+				<Button Text="Informations Pratiques"
+						BackgroundColor="#FF663434"
+						Clicked="OnEnterClicked"/>
+				<Button Text="Contacts"
+						BackgroundColor="#FF663434"
+						Clicked="OnEnterClicked"/>
+			</StackLayout>
+			<Image Source="./Ressources/Drawable/HomePic.jpg"/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

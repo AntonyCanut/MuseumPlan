@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 	BackgroundColor="White"
+				xmlns="http://xamarin.com/schemas/2014/forms" 
+				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+				x:Class="MuseumsPlan.MuseumList">
+	<ContentPage.Content>
+		<StackLayout Padding="20,0,20,0">
+			<Image Source="./Ressources/Drawable/Title.png"/>
+			<ListView	x:Name="ListViewMuseum">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<ViewCell.View>
+								<StackLayout Padding="20,0,20,20"
+										     BackgroundColor="Silver">
+									<Label	Text="{Binding nom_du_musee}"
+											VerticalOptions="Fill"
+	                                		TextColor="#f35e20" />
+									<Label	Text="{Binding ville}" 
+											TextColor="Aqua"
+											VerticalOptions="Fill" />
+									<Label	Text="{Binding sitweb}"
+											TextColor="Aqua"
+											VerticalOptions="Fill" />
+								</StackLayout>
+							</ViewCell.View>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
