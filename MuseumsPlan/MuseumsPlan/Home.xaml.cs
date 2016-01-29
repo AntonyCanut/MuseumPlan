@@ -15,9 +15,7 @@ namespace MuseumsPlan
 		public void OnEnterClicked(object sender, EventArgs e)
 		{
 			//DisplayAlert ("Alert", "You have been alerted", "OK");
-			//App.Instance.MainPage = new NavigationPage (new MuseumList ());
 			Navigation.PushModalAsync(new MuseumList());
-		    Navigation.PushModalAsync(new MuseumInformation());
 		}
 	}
 }

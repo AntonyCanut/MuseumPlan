@@ -26,6 +26,16 @@ namespace MuseumsPlan
 			}
 		}
 
+		public DataService(string json)
+		{
+			var data = DataService.GetDataService(json);
+			_listMuseums = new List<Museum>();
+			foreach (var museum in data.records)
+			{
+				_listMuseums.Add(museum.fields);
+			}
+		}
+
 		public static MuseumData GetDataService()
 		{
 			string queryString = "http://data.iledefrance.fr/api/records/1.0/search/?dataset=liste_des_musees_franciliens&rows=100&facet=dept";
@@ -35,8 +45,12 @@ namespace MuseumsPlan
 			string responseText = httpResponse.Content.ReadAsStringAsync().Result;
 
             return JsonConvert.DeserializeObject<MuseumData>(responseText);
-
         }
+
+		public static MuseumData GetDataService(string json)
+		{
+			return JsonConvert.DeserializeObject<MuseumData>(json);
+		}
 
         public IList<Museum> GetMuseums()
 		{

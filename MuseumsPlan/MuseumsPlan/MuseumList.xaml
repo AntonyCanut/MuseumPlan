@@ -6,7 +6,8 @@
 	<ContentPage.Content>
 		<StackLayout Padding="20,0,20,0">
 			<Image Source="./Ressources/Drawable/Title.png"/>
-			<ListView	x:Name="ListViewMuseum">
+			<ListView	x:Name="ListViewMuseum"
+						ItemSelected="OnSelectionListViewMuseum"	>
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<ViewCell>

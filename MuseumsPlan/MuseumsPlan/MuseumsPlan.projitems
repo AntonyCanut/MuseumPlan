@@ -13,12 +13,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)MuseumInformation.xaml.cs">
-      <DependentUpon>MuseumInformation.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)MuseumList.xaml.cs">
       <DependentUpon>MuseumList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MuseumDetails.xaml.cs">
+      <DependentUpon>MuseumDetails.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -31,11 +30,12 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)MuseumList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MuseumInformation.xaml">
-      <SubType>Designer</SubType>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Data\Museum.json" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MuseumDetails.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Data\" />
   </ItemGroup>
 </Project>
